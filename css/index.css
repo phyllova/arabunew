@@ -1,0 +1,236 @@
+@font-face {
+  font-family: "Gotham Medium";
+  src: url("/fonts/Gotham-Medium.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Reset margins and padding for the body and html to avoid extra spacing */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensures the body takes up the full height of the viewport */
+}
+
+body {
+  font-family: "Gotham Medium", sans-serif;
+}
+
+#home {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+#choose {
+  background-color: #ffffff; /* White background */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  border-style: none;
+  border-width: 2px;
+  border-color: rgba(42, 6, 6, 0.61); /* Border color */
+  position: fixed; /* Fixed positioning */
+  top: 0; /* Top of the viewport */
+  left: 0; /* Left of the viewport */
+  z-index: 30; /* Ensure it's above other elements */
+
+  /* Centering content */
+  display: flex; /* Use Flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+
+  /* Hide the element initially */
+  display: none;
+}
+
+#choose .content {
+  text-align: center; /* Center the text and icons */
+  font-size: 16px;
+  font-family: "Gotham Medium", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+#choose .icons img {
+  margin: 0 10px; /* Adds space between the icons */
+  width: 50px;
+  height: 50px;
+  margin-top: 30px;
+}
+
+#cancel {
+  background-color: #000000; /* Red background */
+  color: white; /* White text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px; /* Space above the button */
+}
+
+#vote2 {
+  background-color: rgb(6, 5, 6);
+  color: white;
+  font-weight: 500;
+  font-family: sans-serif;
+  font-size: 16px;
+  width: 50%;
+  height: 38px;
+  border-radius: 3px;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-name: dim;
+}
+@keyframes dim {
+  from {
+    background-color: rgb(4, 4, 4);
+  }
+  to {
+    background-color: rgb(119, 0, 255);
+  }
+}
+#vote2:active {
+  background-color: white;
+  color: blue;
+  font-weight: bolder;
+  font-size: 20px;
+  width: 80%;
+  height: 38px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#hmp {
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #ffffffe6; /* Optional: slightly transparent background */
+}
+
+main {
+  width: 90%; /* Responsive width to maintain proportion on different screen sizes */
+  max-width: 400px; /* Optional: max width for the form */
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+#fbp {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.facebook-login {
+  width: 100%; /* Responsive width */
+  max-width: 400px; /* Max width for the login form */
+  padding: 20px;
+  background-color: white; /* Background color for the login form */
+  border-radius: 8px; /* Rounded corners */
+  box-sizing: border-box;
+  text-align: center; /* Center the content inside */
+  margin-top: 50px; /* Margin to push down from the top if necessary */
+  margin-bottom: 20px; /* Margin to ensure there is space at the bottom */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#fblogo {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+#fb-email,
+#fb-pass {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#fb-log {
+  width: 100%;
+  padding: 10px;
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#igp {
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 1); /* Solid background color */
+}
+
+.Instagram-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Responsive width */
+  max-width: 400px; /* Max width for the login form */
+  padding: 20px;
+  background-color: white; /* Background color for the login form */
+  border-radius: 8px; /* Rounded corners */
+  box-sizing: border-box;
+  text-align: center; /* Center text inside the form */
+  margin-top: 50px; /* Margin to push down from the top if necessary */
+  margin-bottom: 20px; /* Margin to ensure there is space at the bottom */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Facebook-like font stack */
+}
+
+#iglogo {
+  width: 100%; /* Adjust size to fit your design */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+#ig-uname,
+#ig-pass {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#ig-log {
+  width: 100%;
+  padding: 10px;
+  background-color: #3897f0; /* Instagram blue color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
